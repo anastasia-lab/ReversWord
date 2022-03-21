@@ -28,20 +28,24 @@ namespace ReversWord
             Console.WriteLine($">>>  {outputString}");
         }
 
-        static void Main(string[] args)
+        static void Print(string InputUserPhrase)
         {
-            Console.WriteLine("Разделение предложения на слова.");
-
-            Console.Write("Введите предложение: ");
-            string UserString = Console.ReadLine();
-
-            string[] ArrayUserString = GetArrayStringSplit(UserString);
+            string[] ArrayUserString = GetArrayStringSplit(InputUserPhrase);
 
             Console.WriteLine("\nРезультат:");
             foreach (string SplitUserString in ArrayUserString)
             {
                 ReversWords(SplitUserString);
             }
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Разделение предложения на слова.");
+
+            Console.Write("Введите предложение: ");
+            string UserString = Console.ReadLine();
+            Print(UserString);
 
             Console.ReadKey();
         }
