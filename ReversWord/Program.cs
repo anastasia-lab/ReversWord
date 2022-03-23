@@ -45,7 +45,14 @@ namespace ReversWord
 
             Console.Write("Введите предложение: ");
             string UserString = Console.ReadLine();
-            Print(UserString);
+            if (UserString == "")
+            {
+                Console.WriteLine("\nСтрока пустая. Пожалуйста, введите предложение, чтобы разделить на слова.");
+            }
+            else
+            {
+                Print(UserString);
+            }
 
             Console.ReadKey();
         }
